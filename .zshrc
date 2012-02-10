@@ -13,7 +13,6 @@ RUBYOPT=-Ku
 alias vi="mvim"
 alias vim="mvim"
 alias mate="mvim"
-alias mvim="v"
 alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
 alias whotunes='lsof -r 2 -P -F n -c iTunes -a -i TCP@`hostname`:3689'
