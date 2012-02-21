@@ -9,10 +9,15 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="crunch"
 RUBYOPT=-Ku
 
-# Example aliases
-alias vi="mvim"
-alias vim="mvim"
-alias mate="mvim"
+# Example aliase
+if test ! -e /usr/local/bin/mvim
+    alias vi="mvim"
+    alias vim="mvim"
+    alias mate="mvim"
+else
+    alias vi="vim"
+    alias mate="vim"
+fi
 alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
 alias whotunes='lsof -r 2 -P -F n -c iTunes -a -i TCP@`hostname`:3689'
