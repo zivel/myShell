@@ -54,9 +54,11 @@
 	
 	" Setting up the directories {
 		set backup 						" backups are nice ...
-		set undofile					" so is persistent undo ...
-		set undolevels=1000 "maximum number of changes that can be undone
-		set undoreload=10000 "maximum number lines to save for undo on a buffer reload
+        if version >= 730
+            set undofile					" so is persistent undo ...
+            set undolevels=1000 "maximum number of changes that can be undone
+            set undoreload=10000 "maximum number lines to save for undo on a buffer reload
+        endif
         " Moved to function at bottom of the file
 		"set backupdir=$HOME/.vimbackup//  " but not when they clog .
 		"set directory=$HOME/.vimswap// 	" Same for swap files
@@ -93,7 +95,9 @@
 		" Broken down into easily includeable segments
 		set statusline=%<%f\    " Filename
 		set statusline+=%w%h%m%r " Options
-		set statusline+=%{fugitive#statusline()} "  Git Hotness
+		if version >= 730
+            set statusline+=%{fugitive#statusline()} "  Git Hotness
+        endif
 		set statusline+=\ [%{&ff}/%Y]            " filetype
 		set statusline+=\ [%{getcwd()}]          " current dir
 		"set statusline+=\ [A=\%03.3b/H=\%02.2B] " ASCII / Hexadecimal value of char
@@ -438,12 +442,18 @@ function! InitializeDirectories()
   let separator = "."
   let parent = $HOME 
   let prefix = '.vim'
-  let dir_list = { 
-			  \ 'backup': 'backupdir', 
-			  \ 'views': 'viewdir', 
-			  \ 'swap': 'directory', 
-			  \ 'undo': 'undodir' }
-
+  if version >= 730
+      let dir_list = { 
+                  \ 'backup': 'backupdir', 
+                  \ 'views': 'viewdir', 
+                  \ 'swap': 'directory', 
+                  \ 'undo': 'undodir' }
+  else
+      let dir_list = { 
+                  \ 'backup': 'backupdir', 
+                  \ 'views': 'viewdir', 
+                  \ 'swap': 'directory'} 
+  endif
   for [dirname, settingname] in items(dir_list)
 	  let directory = parent . '/' . prefix . dirname . "/"
 	  if exists("*mkdir")
