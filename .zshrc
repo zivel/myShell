@@ -10,7 +10,7 @@ ZSH_THEME="crunch"
 RUBYOPT=-Ku
 
 # Example aliase
-if test ! -e /usr/local/bin/mvim
+if test -e /usr/local/bin/mvim; then
     alias vi="mvim"
     alias vim="mvim"
     alias mate="mvim"
