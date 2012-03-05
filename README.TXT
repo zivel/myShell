@@ -8,7 +8,8 @@ Debian http://packages.debian.org/stable/git
 sudo apt-get install git
 
 Then get Oh-My-Zsh
-apt-get install curl if you have to install curl first
+sudo apt-get install curl
+if you have to install curl first
 and 
 sudo apt-get install zsh
 curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
@@ -33,8 +34,4 @@ mv .vimrc .vim.org
 change your login shell in /etc/passwd
 or with the command
 chsh -s /usr/bin/zsh
-
-if zsh is missing: install first
-sudo apt-get install zsh
-
 
