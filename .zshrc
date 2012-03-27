@@ -11,10 +11,12 @@ RUBYOPT=-Ku
 
 # Example aliase
 if test -e /usr/local/bin/mvim; then
+    export SVN_EDITOR=mvim
     alias vi="mvim"
     alias vim="mvim"
     alias mate="mvim"
 else
+    export SVN_EDITOR=vim
     alias vi="vim"
     alias mate="vim"
 fi
@@ -50,3 +52,5 @@ source $ZSH/oh-my-zsh.sh
 export PATH=/Users/furter/.rvm/gems/ruby-1.9.3-p0@tutorial/bin:/Users/furter/.rvm/gems/ruby-1.9.3-p0@global/bin:/Users/furter/.rvm/rubies/ruby-1.9.3-p0/bin:/Users/furter/.rvm/bin:/opt/local/lib/postgresql84/bin:/opt/local/lib/mysql5/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/furter/bin:$PATH
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 [[ -s "/Users/furter/.rvm/scripts/rvm" ]] && source "/Users/furter/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
