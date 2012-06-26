@@ -12,9 +12,11 @@ RUBYOPT=-Ku
 # Example aliase
 if test -e /usr/local/bin/mvim; then
     export SVN_EDITOR=mvim
+    alias mvim="open -a MacVim.app"
     alias vi="mvim"
     alias vim="mvim"
     alias mate="mvim"
+    alias tvim="/usr/bin/vim"
 else
     export SVN_EDITOR=vim
     alias vi="vim"

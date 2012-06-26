@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/Library/WebServer/Documents/Projects/comato_rails3/app/controllers'
-let g:netrw_dirhist_2='/Library/WebServer/Documents/Projects/point_stats/lib'
-let g:netrw_dirhist_3='/Users/furter/.rvm/gems/ruby-1.8.7-p357/gems/json-1.6.5/ext/json/ext/generator'
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Library/WebServer/Documents/Projects/gitComato/comato/config/deploy'
+let g:netrw_dirhist_2='/Library/WebServer/Documents/Projects/gitComato/comato/.bundle'
+let g:netrw_dirhist_3='/Library/WebServer/Documents/Projects/comato_rails3/app/models'
+let g:netrw_dirhist_4='/Library/WebServer/Documents/Projects/comato_rails3'
