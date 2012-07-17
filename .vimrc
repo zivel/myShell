@@ -167,7 +167,7 @@
 	map <S-L> gt
 
 	" Stupid shift key fixes
-	cmap W w 						
+	" cmap W w 						
 	cmap WQ wq
 	cmap wQ wq
 	cmap Q q
@@ -437,6 +437,12 @@ set guifont=Monaco:h14
 		set term=builtin_ansi       " Make arrow and other keys work
 	endif
 " }
+
+ if has("gui_macvim")
+   macmenu &File.New\ Tab key=<nop>
+   map <D-t> <Plug>PeepOpen
+ end
+
 
 function! InitializeDirectories()
   let separator = "."
