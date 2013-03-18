@@ -29,6 +29,7 @@ alias whotunes='lsof -r 2 -P -F n -c iTunes -a -i TCP@`hostname`:3689'
 alias todo='find ~/Documents/SWITCH/Sitzungsnotizen | xargs grep TODO'
 alias notes='cd ~/Documents/SWITCH/Sitzungsnotizen'
 alias meteor='nocorrect meteor'
+alias subl='nocorrect subl'
 
 # To enable shims and autocompletion add to your profile: (from rbenv)
 #if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
