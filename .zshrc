@@ -12,8 +12,8 @@ RUBYOPT=-Ku
 # Example aliase
 if test -e /usr/local/bin/mvim; then
     export SVN_EDITOR=vim
-    alias mvim="open -a MacVim.app"
-#    alias mvim="open -a Sublime\ Text\ 2.app"
+#    alias mvim="open -a MacVim.app"
+    alias mvim="open -a Sublime\ Text\ 2.app"
     alias vi="mvim"
     alias vim="mvim"
     alias mate="mvim"
@@ -28,6 +28,11 @@ alias ohmyzsh="mate ~/.oh-my-zsh"
 alias whotunes='lsof -r 2 -P -F n -c iTunes -a -i TCP@`hostname`:3689'
 alias todo='find ~/Documents/SWITCH/Sitzungsnotizen | xargs grep TODO'
 alias notes='cd ~/Documents/SWITCH/Sitzungsnotizen'
+alias meteor='nocorrect meteor'
+alias subl='nocorrect subl'
+
+# To enable shims and autocompletion add to your profile: (from rbenv)
+#if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -47,13 +52,12 @@ alias notes='cd ~/Documents/SWITCH/Sitzungsnotizen'
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rails3 ruby bundler osx svn rvm vi-mode)
+plugins=(git rails3 rvm ruby bundler osx svn vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/Users/furter/.rvm/gems/ruby-1.9.3-p0@tutorial/bin:/Users/furter/.rvm/gems/ruby-1.9.3-p0@global/bin:/Users/furter/.rvm/rubies/ruby-1.9.3-p0/bin:/Users/furter/.rvm/bin:/opt/local/lib/postgresql84/bin:/opt/local/lib/mysql5/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/furter/bin:$PATH
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
-[[ -s "/Users/furter/.rvm/scripts/rvm" ]] && source "/Users/furter/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+export PATH=/usr/local/bin:/opt/local/lib/postgresql84/bin:/opt/local/lib/mysql5/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/Users/furter/bin:$PATH
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+#export RBENV_ROOT=/usr/local/opt/rbenv
+PATH=$PATH:/usr/local/rvm/bin # Add RVM to PATH for scripting
