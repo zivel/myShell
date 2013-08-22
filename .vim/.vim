@@ -1,0 +1,1 @@
+/home/furter/myShell/.vim

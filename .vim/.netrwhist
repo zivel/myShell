@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/Library/WebServer/Documents/Projects/comato_rails3/app/controllers'
 let g:netrw_dirhist_2='/Library/WebServer/Documents/Projects/point_stats/lib'
 let g:netrw_dirhist_3='/Users/furter/.rvm/gems/ruby-1.8.7-p357/gems/json-1.6.5/ext/json/ext/generator'
@@ -8,3 +8,4 @@ let g:netrw_dirhist_5='/var/www/projects/webmeet/config'
 let g:netrw_dirhist_6='/var/www/projects/webmeet/www-aai/collaboration'
 let g:netrw_dirhist_7='/etc/apache2/sites-enabled'
 let g:netrw_dirhist_8='/var/www/projects/lib/breezeAPI'
+let g:netrw_dirhist_9='/etc/apache2'
