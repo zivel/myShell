@@ -66,5 +66,10 @@ export PATH=/usr/local/bin:/opt/local/lib/postgresql84/bin:/opt/local/lib/mysql5
 #export RBENV_ROOT=/usr/local/var/rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 
-[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
-eval "$(rbenv init -)"
+if test -e /usr/local/bin/brew; then
+  [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
+fi
+
+if test -e $HOME/.rbenv/bin; then
+  eval "$(rbenv init -)"
+fi
