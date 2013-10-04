@@ -6,14 +6,15 @@ ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 # ZSH_THEME="robbyrussell"
-ZSH_THEME="frisk"
+# ZSH_THEME="frisk"
+ZSH_THEME="my"
 RUBYOPT=-Ku
 
 # Example aliase
 if test -e /usr/local/bin/mvim; then
     export SVN_EDITOR=vim
 #    alias mvim="open -a MacVim.app"
-    alias mvim="open -a Sublime\ Text\ 2.app"
+    alias mvim="open -a Sublime\ Text.app"
     alias vi="mvim"
     alias vim="mvim"
     alias mate="mvim"
@@ -30,7 +31,10 @@ alias todo='find ~/Documents/SWITCH/Sitzungsnotizen | xargs grep TODO'
 alias notes='cd ~/Documents/SWITCH/Sitzungsnotizen'
 alias meteor='nocorrect meteor'
 alias subl='nocorrect subl'
-
+alias jruby='nocorrect jruby'
+alias vagrant='nocorrect vagrant'
+alias ungit='nocorrect ungit'
+alias yard='nocorrect yard'
 # To enable shims and autocompletion add to your profile: (from rbenv)
 #if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
@@ -52,12 +56,15 @@ alias subl='nocorrect subl'
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rails3 rvm ruby bundler osx svn vi-mode)
+plugins=(git rails3 ruby bundler osx svn vi-mode autojump)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=/usr/local/bin:/opt/local/lib/postgresql84/bin:/opt/local/lib/mysql5/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/Users/furter/bin:$PATH
 
-#export RBENV_ROOT=/usr/local/opt/rbenv
-PATH=$PATH:/usr/local/rvm/bin # Add RVM to PATH for scripting
+#export RBENV_ROOT=/usr/local/var/rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+
+[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
+eval "$(rbenv init -)"
