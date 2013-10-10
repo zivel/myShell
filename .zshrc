@@ -64,12 +64,12 @@ source $ZSH/oh-my-zsh.sh
 export PATH=/usr/local/bin:/opt/local/lib/postgresql84/bin:/opt/local/lib/mysql5/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/Users/furter/bin:$PATH
 
 #export RBENV_ROOT=/usr/local/var/rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/.rbenv/shims:$PATH"
 
 if test -e /usr/local/bin/brew; then
   [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 fi
 
-if test -e $HOME/.rbenv/bin; then
+if test -e $HOME/.rbenv/shims; then
   eval "$(rbenv init -)"
 fi
