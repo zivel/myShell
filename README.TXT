@@ -23,6 +23,7 @@ create symlinks for the files you want eg:
 ln -s ~/myShell/.zshrc ~/.zshrc
 ln -s ~/myShell/.vimrc ~/.vimrc
 ln -s ~/myShell/.vim ~/.vim
+ln -s ~/myShell/my.zsh-theme ~/.oh-my-zsh/themes/my.zsh-theme
 
 (if file exists move them first)
 mv .zshrc .zshrc.org
