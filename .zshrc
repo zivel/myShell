@@ -58,18 +58,17 @@ alias yard='nocorrect yard'
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git rails3 ruby bundler osx svn vi-mode autojump)
 
-source $ZSH/oh-my-zsh.sh
-
 # Customize to your needs...
 export PATH=/usr/local/bin:/opt/local/lib/postgresql84/bin:/opt/local/lib/mysql5/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/Users/furter/bin:$PATH
 
 #export RBENV_ROOT=/usr/local/var/rbenv
 export PATH="$HOME/.rbenv/shims:$PATH"
-
-if test -e /usr/local/bin/brew; then
-  [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
-fi
+source $ZSH/oh-my-zsh.sh
 
 if test -e $HOME/.rbenv/shims; then
   eval "$(rbenv init -)"
+fi
+
+if test -e /usr/local/bin/brew; then
+  [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 fi
