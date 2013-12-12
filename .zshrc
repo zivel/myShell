@@ -56,7 +56,7 @@ alias yard='nocorrect yard'
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rails3 ruby bundler osx svn vi-mode autojump)
+plugins=(git rails ruby bundler osx svn vi-mode autojump)
 
 # Customize to your needs...
 export PATH=/usr/local/bin:/opt/local/lib/postgresql84/bin:/opt/local/lib/mysql5/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/Users/furter/bin:$PATH
